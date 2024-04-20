@@ -1,22 +1,3 @@
-<?php
-
-	mysql_connect("localhost","tastydev_tetris","%0\$_5?TGxHbz") or die(mysql_error());
-
-	mysql_select_db("tastydev_tetris");
-
-	if (isset($_POST['name']))
-	{
-
-		mysql_query("insert into score (name,score,level) values ('".mysql_real_escape_string($_POST['name'])."',".mysql_real_escape_string($_POST['score']).",".mysql_real_escape_string($_POST['level']).")") or die(mysql_error());
-
-		header('location:/');
-
-	}
-
-	$scores=mysql_query("select * from score order by score desc, level desc, name limit 20");
-
-?>
-
 <html>
 
 	<head>
