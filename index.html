@@ -7,51 +7,6 @@
 	</head>
 
 	<body>
-
-		<div class='scores'>
-
-			<?php $c=1; ?>
-
-			<?php while ($high_score=mysql_fetch_array($scores)): ?>
-
-				<?php if ($c<2): ?>
-
-					<div class='high-score hs-row-first'>
-
-				<?php elseif ($c<3 && $c>1): ?>
-
-					<div class='high-score hs-row-second'>
-
-				<?php elseif ($c<6 && $c>2): ?>
-
-					<div class='high-score hs-row-gold'>
-
-				<?php elseif ($c>=6 && $c<11): ?>
-
-					<div class='high-score hs-row-silver'>
-
-				<?php else: ?>
-
-					<div class='high-score hs-row-bronze'>
-
-				<?php endif; ?>
-
-					<span class='position'><?=$c ?></span>
-
-					<span class='hs-name'><?=$high_score['name'] ?></span>
-
-					<span class='hs-score'><?=$high_score['score'] ?></span>
-
-					<span class='hs-level'> - <?=$high_score['level'] ?></span>
-
-				</div>
-
-				<?php $c++; ?>
-
-			<?php endwhile; ?>
-
-		</div>
-
 		<div class='dev-output'>
 
 			<span class='js-last-piece-that-moved'>0</span>
