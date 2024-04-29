@@ -1,174 +1,222 @@
-var thresholdMultiplier=4;
+var thresholdMultiplier=3;
 
 Config = {
     size:{
-        'width':10,
-        'height':20
+        'width':11,
+        'height':19
     },
     levels:{
-        0:{
-            'interval':750,
-            'threshold':(25 * thresholdMultiplier)
-        },
         1:{
-            'interval':725,
-            'threshold':(50 * thresholdMultiplier)
+            'interval':1009,
+            'threshold':(53 * thresholdMultiplier)
         },
         2:{
-            'interval':700,
-            'threshold':(75 * thresholdMultiplier)
+            'interval':997,
+            'threshold':(79 * thresholdMultiplier)
         },
         3:{
-            'interval':675,
-            'threshold':(100 * thresholdMultiplier)
+            'interval':977,
+            'threshold':(103 * thresholdMultiplier)
         },
         4:{
-            'interval':650,
-            'threshold':(125 * thresholdMultiplier)
+            'interval':953,
+            'threshold':(127 * thresholdMultiplier)
         },
         5:{
-            'interval':625,
-            'threshold':(150 * thresholdMultiplier)
+            'interval':937,
+            'threshold':(157 * thresholdMultiplier)
         },
         6:{
-            'interval':600,
-            'threshold':(175 * thresholdMultiplier)
+            'interval':907,
+            'threshold':(191 * thresholdMultiplier)
         },
         7:{
-            'interval':580,
-            'threshold':(200 * thresholdMultiplier)
+            'interval':881,
+            'threshold':(251 * thresholdMultiplier)
         },
         8:{
-            'interval':560,
-            'threshold':(225 * thresholdMultiplier)
+            'interval':859,
+            'threshold':(331 * thresholdMultiplier)
         },
         9:{
-            'interval':540,
-            'threshold':(250 * thresholdMultiplier)
+            'interval':839,
+            'threshold':(419 * thresholdMultiplier)
         },
         10:{
-            'interval':520,
-            'threshold':(275 * thresholdMultiplier)
+            'interval':823,
+            'threshold':(509 * thresholdMultiplier)
         },
         11:{
-            'interval':500,
-            'threshold':(300 * thresholdMultiplier)
+            'interval':809,
+            'threshold':(599 * thresholdMultiplier)
         },
         12:{
-            'interval':480,
-            'threshold':(325 * thresholdMultiplier)
+            'interval':773,
+            'threshold':(701 * thresholdMultiplier)
         },
         13:{
-            'interval':460,
-            'threshold':(350 * thresholdMultiplier)
+            'interval':757,
+            'threshold':(821 * thresholdMultiplier)
         },
         14:{
-            'interval':440,
-            'threshold':(375 * thresholdMultiplier)
+            'interval':739,
+            'threshold':(883 * thresholdMultiplier)
         },
         15:{
-            'interval':420,
-            'threshold':(400 * thresholdMultiplier)
+            'interval':719,
+            'threshold':(953 * thresholdMultiplier)
         },
         16:{
-            'interval':400,
-            'threshold':(425 * thresholdMultiplier)
+            'interval':673,
+            'threshold':(1031 * thresholdMultiplier)
         },
         17:{
-            'interval':380,
-            'threshold':(450 * thresholdMultiplier)
+            'interval':653,
+            'threshold':(1097 * thresholdMultiplier)
         },
         18:{
-            'interval':360,
-            'threshold':(475 * thresholdMultiplier)
+            'interval':641,
+            'threshold':(1151 * thresholdMultiplier)
         },
         19:{
-            'interval':340,
-            'threshold':(500 * thresholdMultiplier)
+            'interval':617,
+            'threshold':(1447 * thresholdMultiplier)
         },
         20:{
-            'interval':320,
-            'threshold':(525 * thresholdMultiplier)
+            'interval':601,
+            'threshold':(1543 * thresholdMultiplier)
         },
         21:{
-            'interval':300,
-            'threshold':(550 * thresholdMultiplier)
+            'interval':587,
+            'threshold':(1597 * thresholdMultiplier)
         },
         22:{
-            'interval':285,
-            'threshold':(575 * thresholdMultiplier)
+            'interval':569,
+            'threshold':(1669 * thresholdMultiplier)
         },
         23:{
-            'interval':270,
-            'threshold':(600 * thresholdMultiplier)
+            'interval':547,
+            'threshold':(1999 * thresholdMultiplier)
         },
         24:{
-            'interval':255,
-            'threshold':(625 * thresholdMultiplier)
+            'interval':521,
+            'threshold':(2083 * thresholdMultiplier)
         },
         25:{
-            'interval':240,
-            'threshold':(650 * thresholdMultiplier)
+            'interval':499,
+            'threshold':(2213 * thresholdMultiplier)
         },
         26:{
-            'interval':225,
-            'threshold':(675 * thresholdMultiplier)
+            'interval':479,
+            'threshold':(2357 * thresholdMultiplier)
         },
         27:{
-            'interval':210,
-            'threshold':(700 * thresholdMultiplier)
+            'interval':461,
+            'threshold':(2521 * thresholdMultiplier)
         },
         28:{
-            'interval':195,
-            'threshold':(725 * thresholdMultiplier)
+            'interval':443,
+            'threshold':(2719 * thresholdMultiplier)
         },
         29:{
-            'interval':180,
-            'threshold':(750 * thresholdMultiplier)
+            'interval':431,
+            'threshold':(3001 * thresholdMultiplier)
         },
         30:{
-            'interval':165,
-            'threshold':(775 * thresholdMultiplier)
+            'interval':409,
+            'threshold':(3301 * thresholdMultiplier)
         },
         31:{
-            'interval':155,
-            'threshold':(825 * thresholdMultiplier)
+            'interval':389,
+            'threshold':(3539 * thresholdMultiplier)
         },
         32:{
-            'interval':145,
-            'threshold':(880 * thresholdMultiplier)
+            'interval':373,
+            'threshold':(3803 * thresholdMultiplier)
         },
         33:{
-            'interval':140,
-            'threshold':(950 * thresholdMultiplier)
+            'interval':353,
+            'threshold':(4091 * thresholdMultiplier)
         },
         34:{
-            'interval':135,
-            'threshold':(1050 * thresholdMultiplier)
+            'interval':337,
+            'threshold':(4493 * thresholdMultiplier)
         },
         35:{
-            'interval':130,
-            'threshold':(1150 * thresholdMultiplier)
+            'interval':313,
+            'threshold':(5003 * thresholdMultiplier)
         },
         36:{
-            'interval':125,
-            'threshold':(1250 * thresholdMultiplier)
+            'interval':293,
+            'threshold':(5519 * thresholdMultiplier)
         },
         37:{
-            'interval':120,
-            'threshold':(1350 * thresholdMultiplier)
+            'interval':281,
+            'threshold':(6113 * thresholdMultiplier)
         },
         38:{
-            'interval':115,
-            'threshold':(1500 * thresholdMultiplier)
+            'interval':269,
+            'threshold':(6803 * thresholdMultiplier)
         },
         39:{
-            'interval':110,
-            'threshold':(2000 * thresholdMultiplier)
+            'interval':251,
+            'threshold':(7643 * thresholdMultiplier)
         },
         40:{
-            'interval':100,
-            'threshold':(5000 * thresholdMultiplier)
+            'interval':233,
+            'threshold':(8501 * thresholdMultiplier)
+        },
+        41:{
+            'interval':223,
+            'threshold':(9497 * thresholdMultiplier)
+        },
+        42:{
+            'interval':197,
+            'threshold':(11027 * thresholdMultiplier)
+        },
+        43:{
+            'interval':181,
+            'threshold':(11987 * thresholdMultiplier)
+        },
+        44:{
+            'interval':167,
+            'threshold':(13001 * thresholdMultiplier)
+        },
+        45:{
+            'interval':151,
+            'threshold':(14149 * thresholdMultiplier)
+        },
+        46:{
+            'interval':137,
+            'threshold':(15217 * thresholdMultiplier)
+        },
+        47:{
+            'interval':113,
+            'threshold':(16427 * thresholdMultiplier)
+        },
+        48:{
+            'interval':103,
+            'threshold':(17783 * thresholdMultiplier)
+        },
+        49:{
+            'interval':89,
+            'threshold':(19319 * thresholdMultiplier)
+        },
+        50:{
+            'interval':73,
+            'threshold':(21011 * thresholdMultiplier)
+        },
+        51:{
+            'interval':61,
+            'threshold':(23117 * thresholdMultiplier)
+        },
+        52:{
+            'interval':59,
+            'threshold':(26339 * thresholdMultiplier)
+        },
+        53:{
+            'interval':53,
+            'threshold':(30011 * thresholdMultiplier)
         }
     }
 }

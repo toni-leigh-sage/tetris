@@ -32,7 +32,7 @@
         cells:[],
 
         // current level
-        level:0,
+        level:1,
 
         // level definitions, such as interval, score thresh-hold etc
         levels:Config.levels,
@@ -52,7 +52,6 @@
          */
         inititialiseCells:function()
         {
-
             for (var y=0;y<this.size.height;y++)
             {    
                 this.cells[y]=[];
@@ -180,8 +179,14 @@
             }
 
             // if completed then trigger completed row function
-            var score=Object.keys(removeRows).length * Object.keys(removeRows).length;
-            this.score+=score;
+            var scoreMultiplierList = [
+                null,
+                3,
+                13,
+                29,
+                53,
+            ]
+            this.score+=scoreMultiplierList[Object.keys(removeRows).length];
             this.outputScore();
             for (var removeRow in removeRows)
             {

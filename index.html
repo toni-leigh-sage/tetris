@@ -1,73 +1,36 @@
 <html>
-
 	<head>
-
 		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
 	</head>
-
 	<body>
 		<div class='dev-output'>
-
 			<span class='js-last-piece-that-moved'>0</span>
-
 			<span id='js-piece-count'>0</span>
-
 			<div id='js-piece-data'></div>
-
 		</div>
-
 		<div id='js-event-counter' class='event-counter'>0</div>
-
 		<div id='js-score' class='score'>0</div>
-
-		<div id='js-level' class='level'>0</div>
-
+		<div id='js-level' class='level'>1</div>
 		<div class='grid-wrapper'>
-			<div id='js-tetris' class='grid' data-component='grid'>
+			<div id='js-tetris' class='grid' data-component='grid' />
 		</div>
-
-
-
-		</div>
-
-		<div id='js-next-piece' class='preview-cells'>
-
-
-
-		</div>
-
+		<div id='js-next-piece' class='preview-cells' />
 		<div id='js-form-background' class='form-background'>
-				
 			<form id='js-high-score' class='high-score-form' method='post'>
-
 				<input type='text' name='name' maxlength="3"/>
-
 				<input id='js-form-score' type='hidden' name='score' value='0'/>
-
 				<input id='js-form-level' type='hidden' name='level' value='0'/>
-
 				<input type='submit' name='submit' value='submit score'/>
-
 			</form>
-
 		</div>
-
-
-
 	</body>
-
 </html>
-
 <script src='config.js'></script>
 <script src='grid.js'></script>
 <script src='piece.js'></script>
 <script src='cell.js'></script>
 <script src='keys.js'></script>
 <script src='timer.js'></script>
-
 <script>
-
 	window.tetris=new window.Grid('js-tetris');
-
 </script>

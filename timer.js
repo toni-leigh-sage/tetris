@@ -10,7 +10,7 @@
 
         t.grid=grid;
 
-        t.currentInterval=t.grid.levels[0]['interval'];
+        t.currentInterval=t.grid.levels[1]['interval'];
 
         t.eventCounterSpan=document.getElementById('js-event-counter');
 
