@@ -116,6 +116,45 @@
 
         },
 
+        updateHighScores:function()
+        {
+
+            var highScoreCount = this.countHighScores();
+
+            var previousHighScore = this.highScores[highScoreCount-1].score
+
+            for (var i=highScoreCount; i>0; i--)
+            {
+
+                document.querySelector('#js-high-score-'+i).classList.remove('current');
+
+                var currentHighScore = this.highScores[i-1].score;
+
+                if (this.score <= currentHighScore && this.score > previousHighScore) {
+
+                    document.querySelector('#js-high-score-'+(i+1)).classList.add('current');
+
+                    this.highScores.splice(i, 0, {
+                        name:'???',
+                        level: this.level,
+                        score: this.score,
+                        pieceType: 'four'
+                    });
+
+                }
+
+                previousHighScore = currentHighScore
+
+            }
+
+        },
+
+        countHighScores:function() {
+
+            return Math.min(this.highScores.length, 11);
+
+        },
+
         /**
          *  startGame() - triggers a game, including piece generation and timing
          */
@@ -167,7 +206,7 @@
         outputHighScores:function()
         {
 
-            var highScoreCount = this.highScores.length;
+            var highScoreCount = this.countHighScores();
 
             for (var i=1; i<=highScoreCount; i++)
             {
@@ -230,6 +269,13 @@
             ]
             this.score+=scoreMultiplierList[Object.keys(removeRows).length];
             this.outputScore();
+            if (this.score > this.highScores[10].score) {
+
+                this.updateHighScores();
+
+                this.outputHighScores();
+
+            }
             for (var removeRow in removeRows)
             {
 
