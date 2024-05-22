@@ -58,10 +58,6 @@ Config = {
             'interval':757,
             'threshold':(821 * thresholdMultiplier)
         },
-        14:{
-            'interval':739,
-            'threshold':(883 * thresholdMultiplier)
-        },
         15:{
             'interval':719,
             'threshold':(953 * thresholdMultiplier)
