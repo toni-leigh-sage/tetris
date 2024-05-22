@@ -119,6 +119,11 @@
 
                 t.grid.level++;
 
+                // Neo-Nazis, f*k off
+                if (t.grid.level === 14) {
+                    t.grid.level++;
+                }
+
                 t.grid.outputLevel();
 
                 t.pauseTimer();
