@@ -6,11 +6,15 @@
 
         this.gridDiv=document.getElementById(gridDiv);
 
+        this.loadHighScores();
+
         this.inititialiseCells();
 
         this.previewDiv=document.getElementById('js-next-piece');
 
         this.initialisePreviewCells();
+
+        this.outputHighScores();
 
         this.timer=new window.Timer(this);
 
@@ -47,6 +51,9 @@
         // the running score total
         score:0,  
 
+        // the high-scores
+        highScores:[],
+
         /**
          *  inititialiseCells() - builds an array of cell objects
          */
@@ -70,7 +77,7 @@
         /**
          *  initialisePreviewCells() - sets up the piece preview cells
          */
-        initialisePreviewCells: function()
+        initialisePreviewCells:function()
         {
 
             for (var y=0; y<5; y++)
@@ -89,6 +96,23 @@
                 }
 
             }
+
+        },
+
+        loadHighScores:function()
+        {
+
+            var highScores = JSON.parse(window.localStorage.getItem("highScores"));
+
+            if (!highScores) {
+
+                highScores = Config.highScores;
+
+                window.localStorage.setItem("highScores", JSON.stringify(highScores));
+
+            }
+
+            this.highScores=highScores;
 
         },
 
@@ -123,7 +147,7 @@
         /**
          *  outputScore() - put the score on the screen
          */
-        outputScore: function()
+        outputScore:function()
         {
 
             document.getElementById("js-score").innerHTML=this.score;
@@ -133,17 +157,35 @@
         /**
          *  outputLevel() - put the level on the screen
          */
-        outputLevel: function()
+        outputLevel:function()
         {
 
             document.getElementById("js-level").innerHTML=this.level;
 
         },
 
+        outputHighScores:function()
+        {
+
+            var highScoreCount = this.highScores.length;
+
+            for (var i=1; i<=highScoreCount; i++)
+            {
+
+                var highScore = this.highScores[i-1];
+
+                ['name', 'level', 'pieceType', 'score'].map(function(key) {
+                    document.querySelector('#js-high-score-'+i+' .js-'+key).innerHTML=highScore[key];
+                })
+
+            }
+
+        },
+
         /**
          *  findCompletedRows() - looks for completed rows now this piece is stopped
          */
-        findCompletedRows: function(piecePosition)
+        findCompletedRows:function(piecePosition)
         {
 
             // get the rows this piece occupies
