@@ -1,4 +1,4 @@
-var thresholdMultiplier=3;
+var thresholdMultiplier=2;
 
 Config = {
     size:{
