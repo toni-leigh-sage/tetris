@@ -5,18 +5,28 @@ Config = {
         'width':11,
         'height':19
     },
+    highScoreCount: 11,
     highScores: [
         { name: 'MX',  score: 1223, level:  19, pieceType: 'prime' },
         { name: 'TLS', score:  929, level:  17, pieceType: 'four'  },
         { name: 'TON', score:  607, level:  13, pieceType: 'prime' },
         { name: 'MAY', score:  401, level:  11, pieceType: 'prime' },
         { name: 'ABI', score:  359, level:   7, pieceType: 'four'  },
-        { name: 'ANA', score:  241, level:   5, pieceType: 'four'  },
-        { name: 'ZOE', score:  239, level:   5, pieceType: 'four'  },
-        { name: 'MON', score:  179, level:   3, pieceType: 'four'  },
-        { name: 'XIA', score:  131, level:   3, pieceType: 'four'  },
-        { name: 'QU',  score:   97, level:   2, pieceType: 'four'  },
-        { name: 'FRM', score:   37, level:   1, pieceType: 'four'  }
+        { name: 'ANA', score:   11, level:   5, pieceType: 'four'  },
+        { name: 'ZOE', score:    8, level:   5, pieceType: 'four'  },
+        { name: 'MON', score:    7, level:   3, pieceType: 'four'  },
+        { name: 'XIA', score:    6, level:   3, pieceType: 'four'  },
+        { name: 'QU',  score:    5, level:   2, pieceType: 'four'  },
+        { name: 'FRM', score:    2, level:   1, pieceType: 'four'  }
+
+        // { name: 'ABI', score:  359, level:   7, pieceType: 'four'  },
+        // { name: 'ANA', score:  241, level:   5, pieceType: 'four'  },
+        // { name: 'ZOE', score:  239, level:   5, pieceType: 'four'  },
+        // { name: 'MON', score:  179, level:   3, pieceType: 'four'  },
+        // { name: 'XIA', score:  131, level:   3, pieceType: 'four'  },
+        // { name: 'QU',  score:   97, level:   2, pieceType: 'four'  },
+        // { name: 'FRM', score:   37, level:   1, pieceType: 'four'  }
+
     ],
     levels:{
         1:{

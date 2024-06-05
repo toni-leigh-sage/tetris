@@ -54,6 +54,9 @@
         // the high-scores
         highScores:[],
 
+        // high-score position (0 index, array)
+        highScoreIndex:Config.highScoreCount,
+
         /**
          *  inititialiseCells() - builds an array of cell objects
          */
@@ -119,20 +122,18 @@
         updateHighScores:function()
         {
 
-            var highScoreCount = this.countHighScores();
+            var previousHighScore = this.highScores[Config.highScoreCount-1].score
 
-            var previousHighScore = this.highScores[highScoreCount-1].score
-
-            for (var i=highScoreCount; i>0; i--)
+            for (var i=Config.highScoreCount; i>0; i--)
             {
-
-                document.querySelector('#js-high-score-'+i).classList.remove('current');
 
                 var currentHighScore = this.highScores[i-1].score;
 
                 if (this.score <= currentHighScore && this.score > previousHighScore) {
 
-                    document.querySelector('#js-high-score-'+(i+1)).classList.add('current');
+                    document.querySelectorAll('.js-high-score').forEach(hsElem => hsElem.classList.remove('current'));
+
+                    this.highScores = this.highScores.filter(({ name }) => name !== '???');
 
                     this.highScores.splice(i, 0, {
                         name:'???',
@@ -140,6 +141,10 @@
                         score: this.score,
                         pieceType: 'four'
                     });
+
+                    this.highScoreIndex = i
+
+                    document.querySelector('#js-high-score-'+(i+1)).classList.add('current');
 
                 }
 
@@ -149,9 +154,14 @@
 
         },
 
-        countHighScores:function() {
+        updateIndividualHighScore:function() {
 
-            return Math.min(this.highScores.length, 11);
+            if (this.highScoreIndex < Config.highScoreCount) {
+
+                document.querySelector('#js-high-score-'+(this.highScoreIndex+1)+' .js-score').innerHTML=this.score;
+
+            }
+
 
         },
 
@@ -206,9 +216,7 @@
         outputHighScores:function()
         {
 
-            var highScoreCount = this.countHighScores();
-
-            for (var i=1; i<=highScoreCount; i++)
+            for (var i=1; i<=Config.highScoreCount; i++)
             {
 
                 var highScore = this.highScores[i-1];
@@ -267,13 +275,20 @@
                 29,
                 53,
             ]
+
             this.score+=scoreMultiplierList[Object.keys(removeRows).length];
+
             this.outputScore();
-            if (this.score > this.highScores[10].score) {
+
+            if (this.score > this.highScores[this.highScoreIndex - 1].score) {
 
                 this.updateHighScores();
 
                 this.outputHighScores();
+
+            } else {
+
+                this.updateIndividualHighScore()
 
             }
             for (var removeRow in removeRows)
@@ -311,8 +326,6 @@
                     }
 
                 }
-
-                // move all the cells in rows above down one
 
             }
 
