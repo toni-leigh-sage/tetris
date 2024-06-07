@@ -1,0 +1,1 @@
+* high-score code should only trigger a change in position occurs

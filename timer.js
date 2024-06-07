@@ -106,8 +106,7 @@
 
                     document.getElementById('js-form-score').value=t.grid.score;
                     document.getElementById('js-form-level').value=t.grid.level;
-                    document.getElementById('js-form-background').style.opacity=1;
-                    document.getElementById('js-high-score').style.opacity=1;                    
+                    document.getElementById('js-form-background').style.zIndex=1;
                 }
 
             }
